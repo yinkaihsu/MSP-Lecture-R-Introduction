@@ -42,6 +42,22 @@ Link to AML experiment: https://goo.gl/SfJanw
 
 ## 分享內容 Detail
 
+### Lecturer Introduction
+
+**徐英愷 Ian Hsu**
+
+*    國立成功大學 交通管理科學系
+
+*    國立成功大學 巨量資料分析學分學程
+
+*    R 資料分析專案 with 健保資料庫
+
+*    R 資料分析專案 with 高速公路 ETC 資料
+
+*    Microsoft Student Partners 12th
+
+*    喜愛跨領域交流、旅遊、欣賞運動賽事
+
 ### Motivation of this share
 
 *    **Data preprocessing** will take 50-80% of your time in data analysis
@@ -165,19 +181,4 @@ setdiff(tbl_Salaries_2016_team, tbl_Salaries_2015_team)
 
 5. Facebook Page: [Microsoft Student Partners in Taiwan 微軟學生大使 - MSP](https://www.facebook.com/MSPTaiwan/)
 
-### Lecturer Introduction
-
-**徐英愷 Ian Hsu**
-
-*    國立成功大學 交通管理科學系
-
-*    國立成功大學 巨量資料分析學分學程
-
-*    R 資料分析專案 with 健保資料庫
-
-*    R 資料分析專案 with 高速公路 ETC 資料
-
-*    Microsoft Student Partners 12th
-
-*    喜愛跨領域交流、旅遊、欣賞運動賽事
-
+---
