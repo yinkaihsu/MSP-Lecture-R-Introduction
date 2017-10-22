@@ -36,7 +36,7 @@ Link to lecture note: https://goo.gl/CHMuas
 *    Using **dplyr** package and **Azure Machine Learning Studio** to predict salaries of MLB batters (10 mins)
         *    Very quick overview of AML
 
-Link to AML experiment: https://goo.gl/DU3evZ
+Link to AML experiment: https://goo.gl/SfJanw
 
 ---
 
