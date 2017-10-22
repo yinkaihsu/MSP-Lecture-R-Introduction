@@ -60,7 +60,7 @@ Author of R package dplyr: **Hadley Wickham**
 
 ### Dataset used
 
-*    **Lahman Database (Baseball Data)**
+*    **Lahman Database (Baseball Data)**  
 The Lahman database contains pitching, hitting, and fielding
 statistics for Major League Baseball from 1871 through 2016. It
 includes data from the two current leagues (American and National),
