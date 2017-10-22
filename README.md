@@ -31,8 +31,12 @@ Created by <font color="#006699">**Ian Hsu**</font> in MSP 12th
         *    bind_cols, bind_rows
         *    union, intersect, setdiff
 
+Link to lecture note: https://goo.gl/CHMuas
+
 *    Using **dplyr** package and **Azure Machine Learning Studio** to predict salaries of MLB batters (10 mins)
         *    Very quick overview of AML
+
+Link to AML experiment: https://goo.gl/DU3evZ
 
 ---
 
