@@ -38,9 +38,11 @@ team_salary_2015 <- salary %>% filter(yearID == 2015) %>% select(playerID, teamI
   group_by(teamID) %>% summarise(team_salary = mean(salary))
 
 # combine factors considered above
-mean_salary_2015 <- mean(team_salary_2015$team_salary, na.rm = T)
 batter_data_v1 <- salary_batter_2016 %>% 
   left_join(team_salary_2015, by = "teamID") %>% select(-teamID, -P_or_B)
+
+# replace rows of no team salary with the mean salary of the league
+mean_salary_2015 <- mean(team_salary_2015$team_salary, na.rm = T)
 batter_data_v1$team_salary <- 
   replace(batter_data_v1$team_salary, is.na(batter_data_v1$team_salary), mean_salary_2015)
 
@@ -72,6 +74,8 @@ batting_2015 <- batting %>% filter(yearID == 2015) %>%
 
 # combine factors considered above
 batter_data_v2 <- batter_data_v1 %>% left_join(batting_2015, by = "playerID")
+
+# replace rows of no player stat with zero in each category
 batter_data_v2 <- as.data.frame(lapply(batter_data_v2, function(x){replace(x, is.na(x), 0)})) %>% 
   mutate(playerID = as.character(playerID))
 
@@ -94,18 +98,21 @@ master <- maml.mapInputPort(2)
 
 # load in packages installed
 library(dplyr)
-library(plyr)
 
 # calculate years in MLB of each player in 2015
 year_2015 <- master %>% 
-  mutate(years_MLB = as.integer(as.Date("2016-01-01") - as.Date(debut)) / 365) %>% 
+  mutate(years_MLB = as.integer(as.Date("2015-12-31") - as.Date(debut)) / 365) %>% 
   select(playerID, years_MLB)
 
 # combine factors considered above
 batter_data_v3 <- batter_data_v2 %>% left_join(year_2015, by = "playerID")
+
+# replace rows of no experience with zero year in MLB
+batter_data_v3 <- as.data.frame(lapply(batter_data_v3, function(x){replace(x, is.na(x), 0)}))
+
+# replace rows of negative years of experience with zero year in MLB
 batter_data_v3$years_MLB <- 
   replace(batter_data_v3$years_MLB, batter_data_v3$years_MLB < 0, 0)
-batter_data_v3 <- as.data.frame(lapply(batter_data_v3, function(x){replace(x, is.na(x), 0)}))
 
 # select data.frame to be sent to the output Dataset port
 ## The following line should be exectuted only when running in Azure ML Studio. 
