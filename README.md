@@ -94,7 +94,7 @@ Association of 1871-1875.
 
 *    **Variables**
         *    Output: Salaries of batters in 2016
-        *    Input: Information about batters and their team in 2015
+        *    Input: Information about batters and their teams in 2015
 
 ### Code Illustration
 
