@@ -66,7 +66,7 @@ Link to AML experiment: https://goo.gl/SfJanw
         *    Make data suitable to use with a particular piece of software
                 *    i.e. R, Python
 
-        *    Reveal information
+        *    Reveal important information
 
         *    Extract variables to analyze
 
