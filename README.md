@@ -64,7 +64,11 @@ Link to AML experiment: https://goo.gl/SfJanw
 
 *    Goal of **Data preprocessing**
         *    Make data suitable to use with a particular piece of software
+                *    i.e. R, Python
+
         *    Reveal information
+
+        *    Extract variables to analyze
 
 ### Introduction of R package dplyr
 
